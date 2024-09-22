@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تسک دوره جاوااسکریپت</title>
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <!-- پریلودر -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <div class="container" id="initial-page" style="display: none;">
+        <div class="main-header">
+            <h1>لیست تراکنش‌ها</h1>
+        </div>
+        <button class="transaction-btn">بارگذاری تراکنش‌ها</button>
+    </div>
+
+    <div class="container" id="transactions-page" style="display: none">
+        <div class="main-header">
+            <h1>لیست تراکنش‌ها</h1>
+            <div class="transaction-search">
+                <input type="text" placeholder="جستجوی تراکنش..." class="searchInput" />
+                <button class="search-btn"><i class="fas fa-search inputIcon"></i></button>
+            </div>
+        </div>
+        <div class="table-container">
+            <p>لیست تراکنش‌های شما</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ردیف</th>
+                        <th>نوع تراکنش</th>
+                        <th>
+                            <span>مبلغ</span>
+                            <button class="btn price-sort">
+                                <i class="fas fa-chevron-down arrow"></i>
+                            </button>
+                        </th>
+                        <th>شماره پیگیری</th>
+                        <th>
+                            <span>تاریخ تراکنش</span>
+                            <button class="btn date-sort">
+                                <i class="fas fa-chevron-down arrow-date"></i>
+                            </button>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="table-body">
+                    <!-- محتوای تراکنش‌ها اینجا قرار می‌گیرد -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

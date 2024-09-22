@@ -1,0 +1,235 @@
+@import url("fonts.css");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+:root {
+    --color-primary: #001247;
+    --color-secondary: #094789;
+    --color-white: #ffffff;
+    --color-light-bg: #f7f9fc;
+    --color-dark-bg: #eaeaea;
+    --color-border: #dcdcdc;
+    --color-text: #333333;
+}
+
+body {
+    font-family: "Vazirmatn";
+    background-color: var(--color-light-bg);
+    direction: rtl;
+}
+
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid var(--color-primary);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#initial-page {
+    display: none;
+}
+
+#transactions-page {
+    display: none;
+}
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--color-white);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.container:hover {
+    transform: translateY(-2px);
+}
+
+.main-header h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color-primary);
+}
+
+.transaction-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-family: "vazirmatn", sans-serif;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-btn:hover {
+    background-color: var(--color-secondary);
+    transform: scale(1.08);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    color: var(--color-white);
+}
+
+.transaction-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+
+.transaction-search {
+    /* background-color: #aa1d1d; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.transaction-search input {
+    font-family: "vazirmatn";
+    width: 0px;
+    padding: 0px;
+    border: transparent;
+    border-radius: 0px;
+    margin-left: 10px;
+    transition: all 0.5s;
+}
+
+.transaction-search input.active{
+    width: 400px;
+    border: 1px solid var(--color-border);
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.transaction-search input:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 5px var(--color-primary);
+}
+
+.search-btn {
+    background-color: var(--color-primary);
+    border: none;
+    color: var(--color-white);
+    padding: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.inputIcon{
+    font-size: 20px;
+}
+
+
+.search-btn:hover {
+    background-color: #fff;
+    transform: scale(1.05);
+    transition: all .5s;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-btn.active{
+    background-color: #fff;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.search-btn.active i{
+    color: var(--color-primary);
+}
+
+.search-btn:hover i{
+    color: var(--color-primary);
+    transition: all .5s;
+}
+
+.table-container p {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color-primary);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid var(--color-border);
+}
+
+th {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e9e9e9;
+}
+
+tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.btn {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    /* color: var(--color-primary); */
+    transform: scale(1.1);
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.spin {
+    transform: rotate(180deg);
+    transition: all 250ms ease-in-out;
+}
